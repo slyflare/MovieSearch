@@ -10,15 +10,14 @@ app.use(express.json());
 
 //Home page
 app.get("/", (req, res) => {
-  var getString;
-  if (req.query.Title)
-    res.send(
-      "http://www.omdbapi.com/?i=" + req.query.Title + "&apikey=e8f391fc"
-    );
+  if (req.query.Title) console.log(Title);
 
   res.status(200);
   res.render("home.pug");
+  a;
 });
+
+function getMovie(Title) {}
 
 app.listen(port);
 console.log(`Server listening at http://localhost:${port}`);

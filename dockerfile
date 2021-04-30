@@ -1,8 +1,8 @@
-FROM node:latest
+FROM node:14-slim
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json ./server
 
 RUN npm install
 
@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
