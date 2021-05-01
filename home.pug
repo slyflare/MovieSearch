@@ -11,8 +11,8 @@ body
         br
     div#main
         h2 List of Movies:
-        if movie
+        if movies
             each movie in movies
-                a(href="/movies/" + movie.Title) #{movie.Title}
+                a(href="/" + movie.Title) #{movie.Title}
                 br
         br
